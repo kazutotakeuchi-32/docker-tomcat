@@ -5,26 +5,21 @@ run:
 init:
 	@make build
 	@make run
-
+	@make open
 start: 
 	docker start tomcat
-	
+	@make open
 stop: 
 	docker stop tomcat
-
 destroy_all: 
 	@make rm
 	@make rmi
-
 rm: 
 	docker rm tomcat
-
 rmi:
 	docker rmi tomcat
-
 curl: 
 	curl http://localhost:3000 
-
 open:
 	open http://localhost:3000 
 
