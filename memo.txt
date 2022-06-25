@@ -11,7 +11,7 @@ https://knowledge.sakura.ad.jp/14427
 # cd /opt/
 # tar zxf apache-tomcat-9.0.6.tar.gz
 # cd apache-tomcat-9.0.6
-# ./bin/startup.s
+# ./bin/startup.sh
 
 # yum install -y wget && yum install -y vim && yum install -y curl 
 
