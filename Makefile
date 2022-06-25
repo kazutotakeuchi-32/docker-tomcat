@@ -22,5 +22,7 @@ curl:
 	curl http://localhost:3000 
 open:
 	open http://localhost:3000 
+logs:
+	docker logs -f tomcat 
 
 
