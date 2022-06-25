@@ -1,0 +1,32 @@
+さくらのナレッジ「Docker入門（第三回）～各種dockerコマンドとDockerイメージ作成について～」
+https://knowledge.sakura.ad.jp/14427
+
+[ホスト]
+# docker pull centos:7
+# mkdir -p tomcat-container/logs
+# docker run -it -d -p 18080:8080 -v :tomcat-container/logs:/share/logs --name tomcat centos:7
+
+[コンテナ内]
+# yum install -y java
+# cd /opt/
+# tar zxf apache-tomcat-9.0.6.tar.gz
+# cd apache-tomcat-9.0.6
+# ./bin/startup.s
+
+# yum install -y wget && yum install -y vim && yum install -y curl 
+
+
+[コンテナ ログ確認]
+# cd /opt/apache-tomcat-9.0.6/
+# sed -i -e "s/\${catalina.base}\/logs/\/share\/logs/g" ./conf/logging.properties
+# ./bin/shutdown.sh
+
+#./bin/startup.sh
+# ls -la /share/logs/
+
+
+[ホスト]
+
+
+
+
